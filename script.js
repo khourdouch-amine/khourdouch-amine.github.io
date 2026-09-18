@@ -106,3 +106,73 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+
+/* =========================================================
+   BOOK I — CONTENT PANEL
+========================================================= */
+
+const bookOpen = document.getElementById("book-01-open");
+const bookClose = document.getElementById("book-01-close");
+const bookCloseBottom = document.getElementById("book-01-close-bottom");
+const bookContent = document.getElementById("book-01-content");
+
+
+function openBookContent() {
+
+    if (!bookContent) return;
+
+    bookContent.classList.add("is-open");
+
+    bookContent.setAttribute("aria-hidden", "false");
+
+    if (bookOpen) {
+        bookOpen.setAttribute("aria-expanded", "true");
+    }
+
+    setTimeout(() => {
+
+        bookContent.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }, 50);
+}
+
+
+function closeBookContent() {
+
+    if (!bookContent) return;
+
+    bookContent.classList.remove("is-open");
+
+    bookContent.setAttribute("aria-hidden", "true");
+
+    if (bookOpen) {
+        bookOpen.setAttribute("aria-expanded", "false");
+    }
+
+    document.getElementById("books")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
+
+
+bookOpen?.addEventListener(
+    "click",
+    openBookContent
+);
+
+
+bookClose?.addEventListener(
+    "click",
+    closeBookContent
+);
+
+
+bookCloseBottom?.addEventListener(
+    "click",
+    closeBookContent
+);
