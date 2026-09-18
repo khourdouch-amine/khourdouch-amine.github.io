@@ -1137,39 +1137,47 @@
 
 
                     <!-- BOOK I -->
+<!-- BOOK I -->
 
-                    <article>
+<article class="book-card">
 
-                        <small>
-                            BOOK I · PHYSICS
-                        </small>
+    <small>
+        BOOK I · PHYSICS
+    </small>
 
+    <h3>
+        Théorie moderne des métaux
+    </h3>
 
-                        <h3>
-                            Théorie moderne des métaux
-                        </h3>
+    <h4>
+        De Drude à Sommerfeld
+    </h4>
 
+    <p>
+        Étude historique et quantique
+        de la conduction électronique.
+    </p>
 
-                        <h4>
-                            De Drude à Sommerfeld
-                        </h4>
+    <span class="book-status">
+        Scientific book in development
+    </span>
 
+    <div class="book-actions">
 
-                        <p>
+        <button
+            class="book-btn"
+            type="button"
+            id="book-01-open"
+            aria-expanded="false"
+            aria-controls="book-01-content">
 
-                            Étude historique et quantique
-                            de la conduction électronique.
+            VIEW BOOK CONTENT →
 
-                        </p>
+        </button>
 
+    </div>
 
-                        <span class="book-status">
-
-                            Scientific book in development
-
-                        </span>
-
-                    </article>
+</article>
 
 
 
@@ -1219,7 +1227,222 @@
 
         </section>
 
+<!-- =========================================================
+     BOOK I — CONTENT
+========================================================= -->
 
+<section
+    class="book-detail"
+    id="book-01-content"
+    aria-hidden="true">
+
+    <div class="wrap">
+
+        <div class="book-detail-header">
+
+            <div>
+
+                <p class="book-detail-label">
+                    BOOK I · PHYSICS · SCIENTIFIC WRITING
+                </p>
+
+                <h2>
+                    Théorie moderne des métaux
+                </h2>
+
+                <h3>
+                    De Drude à Sommerfeld
+                </h3>
+
+            </div>
+
+
+            <button
+                id="book-01-close"
+                class="book-detail-close"
+                type="button"
+                aria-label="Close book content">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <!-- BOOK DESCRIPTION -->
+
+        <div class="book-description">
+
+            <p>
+                A scientific study of the development of metallic
+                conduction theory, from the classical Drude model
+                to the quantum description introduced by Sommerfeld.
+                The work follows the historical, physical and
+                mathematical evolution of the theory of electrons
+                in metals.
+            </p>
+
+        </div>
+
+
+        <!-- DOCUMENTS -->
+
+        <div class="book-content-grid">
+
+
+            <!-- COVER -->
+
+            <article class="book-content-card">
+
+                <div class="book-content-preview">
+
+                    <img
+                        src="./assets/book-01/cover.png"
+                        alt="Cover of Théorie moderne des métaux — De Drude à Sommerfeld"
+                        loading="lazy">
+
+                </div>
+
+
+                <div class="book-content-info">
+
+                    <small>
+                        01 · COVER
+                    </small>
+
+                    <h3>
+                        Book Cover
+                    </h3>
+
+                    <p>
+                        Front cover and title page of the
+                        scientific work.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- TABLE OF CONTENTS -->
+
+            <article class="book-content-card">
+
+                <div class="book-pdf-preview">
+
+                    <span>
+                        PDF
+                    </span>
+
+                    <strong>
+                        CONTENTS
+                    </strong>
+
+                </div>
+
+
+                <div class="book-content-info">
+
+                    <small>
+                        02 · CONTENTS
+                    </small>
+
+                    <h3>
+                        Table of Contents
+                    </h3>
+
+                    <p>
+                        Structure of the work and organisation
+                        of the chapters.
+                    </p>
+
+
+                    <a
+                        class="book-document-link"
+                        href="./assets/book-01/contents.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        OPEN CONTENTS →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- INTRODUCTION -->
+
+            <article class="book-content-card">
+
+                <div class="book-pdf-preview">
+
+                    <span>
+                        PDF
+                    </span>
+
+                    <strong>
+                        INTRODUCTION
+                    </strong>
+
+                </div>
+
+
+                <div class="book-content-info">
+
+                    <small>
+                        03 · INTRODUCTION
+                    </small>
+
+                    <h3>
+                        Introduction
+                    </h3>
+
+                    <p>
+                        Introduction to the historical and
+                        physical foundations of metallic
+                        conduction theory.
+                    </p>
+
+
+                    <a
+                        class="book-document-link"
+                        href="./assets/book-01/introduction.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        OPEN INTRODUCTION →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- CLOSE BUTTON -->
+
+        <div class="book-detail-actions">
+
+            <button
+                class="book-btn"
+                type="button"
+                id="book-01-close-bottom">
+
+                CLOSE BOOK CONTENT ↑
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
 
         <!-- =====================================================
              PUBLICATIONS
