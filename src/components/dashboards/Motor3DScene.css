@@ -1,0 +1,214 @@
+.motor-3d-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 54px 7% 32px;
+}
+
+.motor-3d-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.motor-3d-heading > div:first-child > span {
+  color: #00c9b7;
+  font: 10px var(--font-mono);
+  letter-spacing: .13em;
+}
+
+.motor-3d-heading h2 {
+  margin: 12px 0 8px;
+  color: #f1f5f9;
+  font: 500 clamp(23px, 3vw, 34px)/1.2 var(--font-display);
+  letter-spacing: -.035em;
+}
+
+.motor-3d-heading p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.motor-3d-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+  padding: 9px 12px;
+  border: 1px solid rgba(0, 201, 183, .24);
+  color: #8edbd3;
+  font: 9px var(--font-mono);
+  letter-spacing: .08em;
+}
+
+.motor-3d-live i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00c9b7;
+  box-shadow: 0 0 12px rgba(0, 201, 183, .65);
+}
+
+.motor-3d-frame {
+  position: relative;
+  height: clamp(350px, 43vw, 510px);
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, .17);
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(20, 63, 91, .38), transparent 62%),
+    #081426;
+}
+
+.motor-3d-frame canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: pan-y;
+}
+
+.motor-3d-controls {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 5px;
+  border: 1px solid rgba(148, 163, 184, .17);
+  background: rgba(8, 20, 38, .86);
+  backdrop-filter: blur(12px);
+}
+
+.motor-3d-controls button {
+  padding: 9px 12px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #94a3b8;
+  font: 10px var(--font-mono);
+  cursor: pointer;
+  transition: color .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.motor-3d-controls button:hover {
+  color: #f1f5f9;
+}
+
+.motor-3d-controls button.active {
+  border-color: rgba(0, 201, 183, .32);
+  background: rgba(0, 201, 183, .12);
+  color: #5ee4d6;
+}
+
+.motor-3d-hint {
+  position: absolute;
+  right: 18px;
+  top: 20px;
+  color: rgba(203, 213, 225, .65);
+  font: 9px var(--font-mono);
+  letter-spacing: .04em;
+  pointer-events: none;
+}
+
+.motor-3d-legend {
+  position: absolute;
+  bottom: 17px;
+  left: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+  padding: 10px 12px;
+  border: 1px solid rgba(148, 163, 184, .14);
+  background: rgba(8, 20, 38, .82);
+  color: #bdc9d7;
+  font: 9px var(--font-mono);
+  pointer-events: none;
+}
+
+.motor-3d-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.motor-3d-legend i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.motor-legend-metal { background: #8294a8; }
+.motor-legend-copper { background: #d69a48; }
+.motor-legend-flow { background: #00c9b7; }
+
+.motor-3d-note {
+  margin: 13px 0 0;
+  color: #8495aa;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .motor-3d-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .motor-3d-frame {
+    height: 410px;
+  }
+
+  .motor-3d-hint {
+    top: auto;
+    right: 12px;
+    bottom: 68px;
+    max-width: 130px;
+    text-align: right;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .motor-3d-section {
+    padding: 38px 5% 24px;
+  }
+
+  .motor-3d-frame {
+    height: 350px;
+  }
+
+  .motor-3d-controls {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    gap: 3px;
+  }
+
+  .motor-3d-controls button {
+    flex: 1;
+    padding: 9px 5px;
+    font-size: 9px;
+  }
+
+  .motor-3d-hint {
+    bottom: 72px;
+    font-size: 8px;
+  }
+
+  .motor-3d-legend {
+    bottom: 10px;
+    left: 10px;
+    gap: 10px;
+    padding: 8px;
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motor-3d-controls button {
+    transition: none;
+  }
+}

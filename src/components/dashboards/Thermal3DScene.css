@@ -1,0 +1,218 @@
+.thermal-3d-section {
+  width: min(1180px, calc(100% - 64px));
+  margin: 72px auto;
+}
+
+.thermal-3d-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.thermal-3d-heading > div:first-child > span {
+  color: #00C9B7;
+  font: 600 10px 'IBM Plex Mono', monospace;
+  letter-spacing: .16em;
+}
+
+.thermal-3d-heading h2 {
+  margin: 10px 0 7px;
+  color: #F1F5F9;
+  font: 600 clamp(23px, 3vw, 34px) 'Space Grotesk', sans-serif;
+  letter-spacing: -.04em;
+}
+
+.thermal-3d-heading p {
+  margin: 0;
+  color: #94A3B8;
+  font-size: 13px;
+}
+
+.thermal-3d-live {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #A8B7CA;
+  font: 10px 'IBM Plex Mono', monospace;
+  letter-spacing: .08em;
+  white-space: nowrap;
+}
+
+.thermal-3d-live i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00C9B7;
+  box-shadow: 0 0 12px #00C9B7;
+}
+
+.thermal-3d-frame {
+  position: relative;
+  height: clamp(360px, 48vw, 570px);
+  overflow: hidden;
+  border: 1px solid rgba(100, 160, 210, .2);
+  border-radius: 18px;
+  background: #081426;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .22);
+}
+
+.thermal-3d-frame canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: pan-y;
+}
+
+.thermal-3d-controls {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 5px;
+  border: 1px solid rgba(148, 163, 184, .17);
+  border-radius: 10px;
+  background: rgba(8, 20, 38, .78);
+  backdrop-filter: blur(12px);
+}
+
+.thermal-3d-controls button {
+  padding: 9px 12px;
+  border: 0;
+  border-radius: 7px;
+  color: #AAB8CA;
+  background: transparent;
+  font: 500 11px 'Inter', sans-serif;
+  cursor: pointer;
+  transition: color .2s ease, background .2s ease;
+}
+
+.thermal-3d-controls button:hover,
+.thermal-3d-controls button.active {
+  color: #F1F5F9;
+  background: rgba(20, 110, 245, .28);
+}
+
+.thermal-3d-hint {
+  position: absolute;
+  right: 18px;
+  top: 22px;
+  color: #94A3B8;
+  font: 10px 'IBM Plex Mono', monospace;
+  pointer-events: none;
+}
+
+.thermal-3d-legend {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  display: flex;
+  gap: 17px;
+  padding: 10px 12px;
+  border: 1px solid rgba(148, 163, 184, .14);
+  border-radius: 8px;
+  background: rgba(8, 20, 38, .76);
+  color: #B8C5D6;
+  font-size: 10px;
+  pointer-events: none;
+}
+
+.thermal-3d-legend span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.thermal-3d-legend i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.thermal-legend-hot {
+  background: #FF633D;
+  box-shadow: 0 0 9px #FF633D;
+}
+
+.thermal-legend-flow {
+  background: #00C9E8;
+  box-shadow: 0 0 9px #00C9E8;
+}
+
+.thermal-3d-note {
+  margin: 12px 2px 0;
+  color: #71839B;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .thermal-3d-section {
+    width: calc(100% - 32px);
+    margin: 48px auto;
+  }
+
+  .thermal-3d-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .thermal-3d-frame {
+    height: 390px;
+    border-radius: 13px;
+  }
+
+  .thermal-3d-controls {
+    top: 12px;
+    left: 10px;
+    right: 10px;
+    justify-content: center;
+  }
+
+  .thermal-3d-controls button {
+    padding: 8px 9px;
+    font-size: 10px;
+  }
+
+  .thermal-3d-hint {
+    top: auto;
+    right: 12px;
+    bottom: 18px;
+    font-size: 9px;
+  }
+
+  .thermal-3d-legend {
+    bottom: 48px;
+    left: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thermal-3d-controls button {
+    transition: none;
+  }
+}
+
+.thermal-3d-loading {
+  width: min(1180px, calc(100% - 64px));
+  min-height: 360px;
+  margin: 72px auto;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(100, 160, 210, .2);
+  border-radius: 18px;
+  background: #081426;
+  color: #94A3B8;
+  font: 12px 'IBM Plex Mono', monospace;
+}
+
+@media (max-width: 640px) {
+  .thermal-3d-loading {
+    width: calc(100% - 32px);
+    min-height: 390px;
+  }
+}
