@@ -113,7 +113,7 @@ function ProjectDetailPage() {
           className="detail-hero-content"
         >
           <div className="detail-kicker">
-            <span>{project.number} / 12</span>
+            <span>{project.number} / {projects.length}</span>
             <span>{project.year}</span>
             <span>{status}</span>
           </div>
