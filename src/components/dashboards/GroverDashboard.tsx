@@ -126,7 +126,9 @@ function GroverDashboard() {
     resources: isFr ? 'RESSOURCES' : 'RESOURCES',
     github: isFr ? 'Dépôt GitHub' : 'GitHub repository',
     article: isFr ? 'Article scientifique' : 'Scientific article',
-    preparing: isFr ? 'En préparation' : 'In preparation',
+    readArticle: isFr ? "Lire l'article (PDF)" : 'Read article (PDF)',
+    downloadArticle: isFr ? "Télécharger l'article" : 'Download article',
+    articleDescription: isFr ? 'Publication scientifique · Format PDF' : 'Scientific publication · PDF format',
     footer: isFr
       ? 'Calcul réversible · Algorithmes quantiques · Recherche de chemins'
       : 'Reversible computing · Quantum algorithms · Path search',
@@ -449,7 +451,19 @@ function GroverDashboard() {
             <GitBranch size={19} /><span><strong>{t.github}</strong><small>Source code · Experiments · Results</small></span><ArrowUpRight size={17} />
           </a>
           <div className="grover-article-resource">
-            <FlaskConical size={19} /><span><strong>{t.article}</strong><small>{t.preparing}</small></span><span className="grover-preparing">{t.preparing}</span>
+            <FlaskConical size={19} />
+            <span className="grover-article-info">
+              <strong>{t.article}</strong>
+              <small>{t.articleDescription}</small>
+              <span className="grover-article-actions">
+                <a href="/projects/grover/An_Experimental_Assessment_of_Grover_Search.pdf" target="_blank" rel="noreferrer">
+                  {t.readArticle} <ExternalLink size={13} />
+                </a>
+                <a href="/projects/grover/An_Experimental_Assessment_of_Grover_Search.pdf" download="An_Experimental_Assessment_of_Grover_Search.pdf">
+                  {t.downloadArticle}
+                </a>
+              </span>
+            </span>
           </div>
         </div>
       </section>
