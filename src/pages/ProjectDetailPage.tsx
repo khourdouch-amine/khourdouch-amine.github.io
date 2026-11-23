@@ -15,6 +15,10 @@ const ADASDashboard = lazy(
   () => import('../components/dashboards/ADASDashboard')
 )
 
+const GroverDashboard = lazy(
+  () => import('../components/dashboards/GroverDashboard')
+)
+
 const MotorDashboard = lazy(
   () => import('../components/dashboards/MotorDashboard')
 )
@@ -29,6 +33,22 @@ const statusLabels = {
 function ProjectDetailPage() {
   const { projectId } = useParams()
   const { language } = useLanguage()
+
+  if (projectId === 'grover-geometric-path-search') {
+    return (
+      <Suspense
+        fallback={
+          <main className="project-detail-loading">
+            {language === 'FR'
+              ? 'Chargement du tableau de bord Grover…'
+              : 'Loading Grover dashboard…'}
+          </main>
+        }
+      >
+        <GroverDashboard />
+      </Suspense>
+    )
+  }
 
   if (projectId === 'adas-monocular-ttc-aeb') {
     return (
