@@ -23,6 +23,10 @@ const MotorDashboard = lazy(
   () => import('../components/dashboards/MotorDashboard')
 )
 
+const MazeRaceDashboard = lazy(
+  () => import('../components/dashboards/MazeRaceDashboard')
+)
+
 const statusLabels = {
   completed: { EN: 'Completed project', FR: 'Projet terminé' },
   prototype: { EN: 'Research prototype', FR: 'Prototype de recherche' },
@@ -33,6 +37,22 @@ const statusLabels = {
 function ProjectDetailPage() {
   const { projectId } = useParams()
   const { language } = useLanguage()
+
+  if (projectId === 'secure-dynamic-multi-agent-maze-race') {
+    return (
+      <Suspense
+        fallback={
+          <main className="project-detail-loading">
+            {language === 'FR'
+              ? 'Chargement du tableau de bord Maze Race…'
+              : 'Loading Maze Race dashboard…'}
+          </main>
+        }
+      >
+        <MazeRaceDashboard />
+      </Suspense>
+    )
+  }
 
   if (projectId === 'grover-geometric-path-search') {
     return (
