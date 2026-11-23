@@ -1,0 +1,178 @@
+{
+  "episodes": 8,
+  "successes": 1,
+  "collisions": 0,
+  "failures": 7,
+  "success_rate": 0.125,
+  "results": [
+    {
+      "initial_state": "0_0_3",
+      "status": "out_of_workspace",
+      "actions": 2,
+      "action_sequence": [
+        "forward",
+        "forward"
+      ],
+      "final_state": [
+        -1.1217619178923264,
+        -2.0102247340082604,
+        -0.39269908169872414
+      ],
+      "final_goal_distance": 4.031664657607763,
+      "minimum_obstacle_distance": 2.3020324241096284
+    },
+    {
+      "initial_state": "0_0_4",
+      "status": "policy_missing",
+      "actions": 5,
+      "action_sequence": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "final_state": [
+        0.09775906502257253,
+        -0.984633135269823,
+        0.39269908169872414
+      ],
+      "final_goal_distance": 2.514208507957026,
+      "minimum_obstacle_distance": 0.9894742269838912
+    },
+    {
+      "initial_state": "0_1_3",
+      "status": "out_of_workspace",
+      "actions": 5,
+      "action_sequence": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "final_state": [
+        0.06080388372212106,
+        -2.0000595274355737,
+        -0.39269908169872414
+      ],
+      "final_goal_distance": 3.4607909984344816,
+      "minimum_obstacle_distance": 1.8246385513788763
+    },
+    {
+      "initial_state": "0_1_4",
+      "status": "out_of_workspace",
+      "actions": 17,
+      "action_sequence": [
+        "forward",
+        "forward",
+        "rotate_left",
+        "forward",
+        "rotate_left",
+        "forward",
+        "rotate_right",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "rotate_right",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "final_state": [
+        0.750379397888971,
+        2.0009808961575586,
+        0.39269908169872414
+      ],
+      "final_goal_distance": 0.9019939314914469,
+      "minimum_obstacle_distance": 1.0892021057277086
+    },
+    {
+      "initial_state": "1_0_3",
+      "status": "out_of_workspace",
+      "actions": 2,
+      "action_sequence": [
+        "forward",
+        "forward"
+      ],
+      "final_state": [
+        -0.6217619178923252,
+        -2.0102247340082604,
+        -0.39269908169872414
+      ],
+      "final_goal_distance": 3.7593294606234218,
+      "minimum_obstacle_distance": 2.0951498102426482
+    },
+    {
+      "initial_state": "1_0_4",
+      "status": "goal_reached",
+      "actions": 12,
+      "action_sequence": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "rotate_left",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "final_state": [
+        1.6203142703249018,
+        0.8962057082070856,
+        1.3926990816987228
+      ],
+      "final_goal_distance": 0.512155308194218,
+      "minimum_obstacle_distance": 1.1385397867518323
+    },
+    {
+      "initial_state": "1_1_3",
+      "status": "out_of_workspace",
+      "actions": 5,
+      "action_sequence": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "final_state": [
+        0.5608038837221224,
+        -2.0000595274355737,
+        -0.39269908169872414
+      ],
+      "final_goal_distance": 3.32233023923981,
+      "minimum_obstacle_distance": 1.6332074668429184
+    },
+    {
+      "initial_state": "1_1_4",
+      "status": "out_of_workspace",
+      "actions": 9,
+      "action_sequence": [
+        "forward",
+        "forward",
+        "rotate_right",
+        "rotate_right",
+        "forward",
+        "rotate_left",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "final_state": [
+        0.4270868781183855,
+        -2.0055443384672147,
+        -0.6073009183012767
+      ],
+      "final_goal_distance": 3.3579390920460246,
+      "minimum_obstacle_distance": 1.073253963536706
+    }
+  ]
+}

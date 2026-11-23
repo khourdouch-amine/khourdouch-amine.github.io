@@ -996,4 +996,91 @@ export const projects = [
     ],
   },
 
+
+  {
+    id: 'data-driven-symbolic-control',
+    number: '15',
+    title: 'Data-Driven Symbolic Modeling and Predictive Navigation for Autonomous Mobile Robots',
+    titleFr: 'Modélisation symbolique pilotée par les données et navigation prédictive pour robots mobiles autonomes',
+    subtitle: 'Learned dynamics · Symbolic abstraction · Predictive navigation',
+    subtitleFr: 'Dynamique apprise · Abstraction symbolique · Navigation prédictive',
+    year: '2026',
+    status: 'prototype',
+    statusLabel: 'Experimental research prototype',
+    statusLabelFr: 'Prototype de recherche expérimental',
+    summary: 'An experimental research pipeline combining data-driven robot-dynamics learning, finite sampled symbolic abstraction, and predictive geometric navigation. The components are evaluated separately, with explicit attention to generalization and empirical validation.',
+    summaryFr: 'Une chaîne expérimentale de recherche combinant apprentissage de la dynamique du robot à partir de données, abstraction symbolique échantillonnée et navigation géométrique prédictive. Les composants sont évalués séparément, avec une attention particulière à la généralisation et à la validation empirique.',
+    problem: 'Autonomous mobile robots must navigate around obstacles despite imperfect learned models and discretized state representations. This project investigates how learned dynamics, symbolic reach-avoid analysis, and predictive navigation can contribute to this problem, while measuring the limitations of the current experimental methods.',
+    problemFr: 'Les robots mobiles autonomes doivent contourner les obstacles malgré les imperfections des modèles appris et les représentations discrétisées de l’espace d’états. Ce projet étudie les apports de la dynamique apprise, de l’analyse symbolique reach-avoid et de la navigation prédictive, tout en mesurant les limites des méthodes expérimentales actuelles.',
+    objectives: [
+      'Train and evaluate a data-driven model of planar mobile-robot dynamics.',
+      'Calibrate empirical prediction intervals using held-out data.',
+      'Construct a finite sampled symbolic abstraction and investigate reach-avoid winning sets.',
+      'Evaluate geometric navigation with a finite-horizon predictive action filter and footprint-aware obstacle checks.',
+      'Measure independent-episode success and identify generalization failures.'
+    ],
+    objectivesFr: [
+      'Entraîner et évaluer un modèle de dynamique planaire du robot mobile à partir de données.',
+      'Calibrer des intervalles de prédiction empiriques sur des données réservées.',
+      'Construire une abstraction symbolique finie échantillonnée et étudier les ensembles gagnants reach-avoid.',
+      'Évaluer une navigation géométrique avec filtrage prédictif des actions à horizon fini et vérification des obstacles tenant compte de l’empreinte du robot.',
+      'Mesurer le taux de réussite sur des épisodes indépendants et identifier les défauts de généralisation.'
+    ],
+    disciplines: ['robotics', 'artificial-intelligence', 'advanced-control', 'applied-mathematics'],
+    methods: [
+      'Random Forest regression for learned planar dynamics',
+      'Empirical ensemble-spread calibration of prediction intervals',
+      'Finite sampled state-space abstraction',
+      'Reach-avoid winning-set computation',
+      'Geometric navigation with finite-horizon predictive action filtering',
+      'Footprint-aware obstacle-clearance evaluation',
+      'Independent-episode validation'
+    ],
+    tools: ['Python', 'NumPy', 'scikit-learn', 'joblib', 'pytest'],
+    metrics: [
+      { label: 'Dynamics dataset', value: '14,000 / 3,000 / 3,000', context: 'Training, calibration and test transitions' },
+      { label: 'Empirical interval coverage', value: '94.9%', context: 'Simultaneous test coverage; not a formal probabilistic guarantee' },
+      { label: 'Footprint-aware navigation', value: '122 actions', context: 'One nominal simulation reaching the goal' },
+      { label: 'Minimum sampled clearance', value: '5.38 cm', context: 'Against a configured 5 cm margin in the nominal run' },
+      { label: 'Independent validation', value: '1 / 8', context: 'Successful episodes; 0 collisions observed in these eight episodes' },
+      { label: 'H05 symbolic abstraction', value: '24,320 safe states', context: '960 goal states; 200 initial candidates, none in the computed winning set' }
+    ],
+    limitations: [
+      'The learned prediction intervals are empirically calibrated and do not establish formal probabilistic guarantees.',
+      'The symbolic abstraction is finite and sample-based; it does not establish robust reachability or continuous-time safety.',
+      'The geometric predictive action filter is not a Control Barrier Function (CBF) safety filter.',
+      'Independent validation currently shows limited generalization: one success in eight episodes.',
+      'The learned model, symbolic analysis and geometric navigation are experimental components; their results do not establish a formally integrated safety-certified controller.'
+    ],
+    limitationsFr: [
+      'Les intervalles de prédiction sont calibrés empiriquement et ne constituent pas des garanties probabilistes formelles.',
+      'L’abstraction symbolique est finie et fondée sur des échantillons ; elle ne démontre ni atteignabilité robuste ni sûreté en temps continu.',
+      'Le filtre prédictif géométrique n’est pas un filtre de sûreté fondé sur les fonctions barrières de contrôle (CBF).',
+      'La validation indépendante révèle une généralisation encore limitée : un épisode réussi sur huit.',
+      'Le modèle appris, l’analyse symbolique et la navigation géométrique sont des composants expérimentaux ; leurs résultats ne démontrent pas l’existence d’un contrôleur intégré certifié formellement.'
+    ],
+    futureWork: [
+      'Improve the reach-avoid policy and expand its initial-state coverage.',
+      'Increase independent validation across randomized environments and disturbances.',
+      'Investigate formal CBF-based safety filtering and its integration with the learned model.',
+      'Develop sound abstraction and uncertainty methods before making formal safety claims.'
+    ],
+    futureWorkFr: [
+      'Améliorer la politique reach-avoid et élargir sa couverture des états initiaux.',
+      'Augmenter la validation indépendante sur des environnements et perturbations aléatoires.',
+      'Étudier le filtrage de sûreté formel par CBF et son intégration avec le modèle appris.',
+      'Développer des méthodes d’abstraction et de gestion de l’incertitude rigoureuses avant toute revendication de sûreté formelle.'
+    ],
+    links: [
+      {
+        label: 'GitHub repository — Data-Driven Symbolic Control',
+        url: 'https://github.com/khourdouch-amine/DATA_DRIVEN_SYMBOLIC_CONTROL'
+      },
+      {
+        label: '3D navigation demonstration',
+        url: 'https://github.com/khourdouch-amine/DATA_DRIVEN_SYMBOLIC_CONTROL/blob/main/results/videos/geometric_navigation_3d_industrial.mp4'
+      }
+    ]
+  },
+
 ] satisfies Project[]

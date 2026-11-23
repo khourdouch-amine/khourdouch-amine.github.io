@@ -27,6 +27,10 @@ const MazeRaceDashboard = lazy(
   () => import('../components/dashboards/MazeRaceDashboard')
 )
 
+const DataDrivenSymbolicDashboard = lazy(
+  () => import('../components/dashboards/DataDrivenSymbolicDashboard')
+)
+
 const statusLabels = {
   completed: { EN: 'Completed project', FR: 'Projet terminé' },
   prototype: { EN: 'Research prototype', FR: 'Prototype de recherche' },
@@ -114,6 +118,22 @@ function ProjectDetailPage() {
         }
       >
         <MotorDashboard />
+      </Suspense>
+    )
+  }
+
+  if (projectId === 'data-driven-symbolic-control') {
+    return (
+      <Suspense
+        fallback={
+          <main className="project-detail-loading">
+            {language === 'FR'
+              ? 'Chargement du tableau de bord robotique…'
+              : 'Loading robotics dashboard…'}
+          </main>
+        }
+      >
+        <DataDrivenSymbolicDashboard />
       </Suspense>
     )
   }

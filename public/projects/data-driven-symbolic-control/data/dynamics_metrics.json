@@ -1,0 +1,32 @@
+{
+  "model": "RandomForestRegressor",
+  "features": [
+    "x",
+    "y",
+    "sin_theta",
+    "cos_theta",
+    "omega_left",
+    "omega_right"
+  ],
+  "targets": [
+    "delta_x",
+    "delta_y",
+    "delta_theta"
+  ],
+  "train_transitions": 14000,
+  "calibration_transitions": 3000,
+  "test_transitions": 3000,
+  "rmse": [
+    0.0056734966316473985,
+    0.005749204506119337,
+    0.005029715132018156
+  ],
+  "mae": [
+    0.0044727668294449975,
+    0.00456996488379447,
+    0.0036206638687929036
+  ],
+  "calibration_quantile_95": 2.5476766269078044,
+  "test_simultaneous_interval_coverage": 0.949,
+  "uncertainty_note": "Empirical ensemble-spread calibration; not a formal probabilistic guarantee."
+}

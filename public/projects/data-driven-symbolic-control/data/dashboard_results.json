@@ -1,0 +1,119 @@
+{
+  "dynamics": {
+    "model": "RandomForestRegressor",
+    "transitions": {
+      "train": 14000,
+      "calibration": 3000,
+      "test": 3000
+    },
+    "errors": [
+      {
+        "target": "delta_x",
+        "rmse": 0.0056734966316473985,
+        "mae": 0.0044727668294449975
+      },
+      {
+        "target": "delta_y",
+        "rmse": 0.005749204506119337,
+        "mae": 0.00456996488379447
+      },
+      {
+        "target": "delta_theta",
+        "rmse": 0.005029715132018156,
+        "mae": 0.0036206638687929036
+      }
+    ],
+    "coverage": 0.949
+  },
+  "navigation": {
+    "actions": 122,
+    "duration": 12.200000000000001,
+    "initialDistance": 3.8900915798988587,
+    "finalDistance": 0.5249326293464424,
+    "clearance": 0.0538188910429096,
+    "requiredMargin": 0.05,
+    "actionCounts": {
+      "forward": 54,
+      "turn_left": 54,
+      "turn_right": 7,
+      "rotate_left": 0,
+      "rotate_right": 7
+    },
+    "status": "goal_reached"
+  },
+  "validation": {
+    "episodes": 8,
+    "successes": 1,
+    "failures": 7,
+    "collisions": 0,
+    "successRate": 0.125,
+    "results": [
+      {
+        "initialState": "0_0_3",
+        "status": "out_of_workspace",
+        "actions": 2,
+        "goalDistance": 4.031664657607763,
+        "obstacleDistance": 2.3020324241096284
+      },
+      {
+        "initialState": "0_0_4",
+        "status": "policy_missing",
+        "actions": 5,
+        "goalDistance": 2.514208507957026,
+        "obstacleDistance": 0.9894742269838912
+      },
+      {
+        "initialState": "0_1_3",
+        "status": "out_of_workspace",
+        "actions": 5,
+        "goalDistance": 3.4607909984344816,
+        "obstacleDistance": 1.8246385513788763
+      },
+      {
+        "initialState": "0_1_4",
+        "status": "out_of_workspace",
+        "actions": 17,
+        "goalDistance": 0.9019939314914469,
+        "obstacleDistance": 1.0892021057277086
+      },
+      {
+        "initialState": "1_0_3",
+        "status": "out_of_workspace",
+        "actions": 2,
+        "goalDistance": 3.7593294606234218,
+        "obstacleDistance": 2.0951498102426482
+      },
+      {
+        "initialState": "1_0_4",
+        "status": "goal_reached",
+        "actions": 12,
+        "goalDistance": 0.512155308194218,
+        "obstacleDistance": 1.1385397867518323
+      },
+      {
+        "initialState": "1_1_3",
+        "status": "out_of_workspace",
+        "actions": 5,
+        "goalDistance": 3.32233023923981,
+        "obstacleDistance": 1.6332074668429184
+      },
+      {
+        "initialState": "1_1_4",
+        "status": "out_of_workspace",
+        "actions": 9,
+        "goalDistance": 3.3579390920460246,
+        "obstacleDistance": 1.073253963536706
+      }
+    ]
+  },
+  "symbolic": {
+    "totalStates": 25600,
+    "safeStates": 24320,
+    "goalStates": 960,
+    "winningStates": 988,
+    "initialCandidates": 200,
+    "initialWinningStates": 0,
+    "horizon": 0.5,
+    "headingBins": 16
+  }
+}

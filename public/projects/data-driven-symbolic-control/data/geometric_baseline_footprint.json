@@ -1,0 +1,32 @@
+{
+  "controller": "geometric_navigation_with_predictive_action_filter",
+  "initial_state": "8_7_7",
+  "status": "goal_reached",
+  "success": true,
+  "actions_executed": 122,
+  "integration_steps": 122,
+  "simulated_time_seconds": 12.200000000000001,
+  "initial_goal_distance": 3.8900915798988587,
+  "final_goal_distance": 0.5249326293464424,
+  "minimum_obstacle_center_distance": 0.7657095643709515,
+  "minimum_chassis_obstacle_clearance": 0.0538188910429096,
+  "required_safety_margin": 0.05,
+  "chassis_dimensions_m": [
+    0.36,
+    0.29
+  ],
+  "obstacle_radius_m": 0.55,
+  "final_state": [
+    1.2532153038503138,
+    0.7250772178941748,
+    1.4536504591506292
+  ],
+  "action_counts": {
+    "forward": 54,
+    "turn_left": 54,
+    "turn_right": 7,
+    "rotate_left": 0,
+    "rotate_right": 7
+  },
+  "claim_scope": "Nominal simulation with a geometric navigation field and finite-horizon action filtering; not a CBF or probabilistic safety guarantee."
+}
